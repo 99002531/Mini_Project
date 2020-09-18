@@ -63,6 +63,7 @@ struct
  * @note loginpage is initial page to enter into the cafteria management
  * @note It'll ask you to enter the username and password
 */
+int start(int);
 int loginpage();
 
 /**
