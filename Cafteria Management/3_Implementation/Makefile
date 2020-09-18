@@ -1,7 +1,9 @@
   
-SRC = src/canteen.c
+SRC = src/canteen.c/
+test/test.c
 
-INC = -Iinc
+INC = -Iinc\
+-Itest
 
 PROJECT_NAME = CANTEEN.out
 
