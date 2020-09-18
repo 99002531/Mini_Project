@@ -1,64 +1,13 @@
-//#include<stdio.h>
-//#include<string.h>
 #include "canteen.h"
-
-/*struct
-{
-    int product_id;
-    char product_name[8];
-    float product_price;
-    int product_quantity;
-}Products;
-
-struct 
-{
-    int bill_number;
-    char customer_name[15];
-    int pro_id;
-    char customer_product[8];
-    int customer_quantity;
-    float ind_cost;
-    float totalcost;
-}Bill;
-
-struct 
-{
-    int soldid;
-    char soldname[8];
-    float soldcost;
-    int soldquantity;
-}Sale;
-
-int loginpage();
-
-void takeorder();
-
-void manageinventory();
-
-//manage functions
-
-void editprice();
-void viewinventory();
-void addproduct();
-void addquantity();
-
-//Records function
-void records();
-void salesrecord();
-void Clearsalesrecord();
-void Spreadsheet();
-
-void aboutltts();
-
-FILE *fptr;*/
-int main()
+int start(int check)
 {
     system("cls");
     int choice;
     printf("\t\t\t.---------------------------------------.\n");
     printf("\t\t\t|\t WELCOME TO LTTS CAFTERIA\t|\n");
     printf("\t\t\t'---------------------------------------'\n");
-
+    if(check)
+        return check;
 
     if(!loginpage())
     {
