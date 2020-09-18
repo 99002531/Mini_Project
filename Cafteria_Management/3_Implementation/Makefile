@@ -1,8 +1,10 @@
   
-SRC = src/canteen.c/
+SRC = unity/unity.c\
+src/canteen.c\
 test/test.c
 
-INC = -Iinc\
+INC = -Iunity\
+-Iinc\
 -Itest
 
 PROJECT_NAME = CANTEEN.out
