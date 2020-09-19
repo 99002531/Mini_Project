@@ -12,7 +12,7 @@ int start(int check)
     if(!loginpage())
     {
         printf("\nAccess denied\n\nProgram ending.....\n\n");
-        exit();
+        exit(0);
     }
     //system("cls");
     printf("\n\nHiii! WELCOME TO LTTS CAFTERIA\n");
@@ -35,7 +35,7 @@ int start(int check)
                     break;
             case 4: records();
                     break;        
-            case 5: exit();
+            case 5: exit(0);
             default: printf("Invalid choice");
                     break;                               
         }
@@ -121,7 +121,7 @@ void editprice()
         printf("\n\n\n Program is closing ....");
         fclose(fptr);
         getch();
-        exit();
+        exit(0);
     }
     while(fread(&Products,sizeof(Products),1,fptr)>0)
     {
@@ -157,7 +157,7 @@ void addquantity()
         printf("\n\n\n Program is closing ....");
         fclose(fptr);
         getch();
-        exit();
+        exit(0);
     }
     while(fread(&Products,sizeof(Products),1,fptr)>0)
     {
@@ -193,7 +193,7 @@ void addproduct()
         fclose(fptr);
         fclose(fptr1);
         getch();
-        exit();
+        exit(0);
     }
     printf("\n\t You are in ADD NEW PRODUCT PAGE\n");
     printf("\n\tEnter the ID of the product:\t");
@@ -226,7 +226,7 @@ void viewinventory()
        printf("\n\n\n Program is closing ....");
        fclose(fptr);
        getch();
-       exit();
+       exit(0);
     }
     printf("\n================================================\n");
     printf(" ID\tName\tQuantity\tPrice(for each)\n");
@@ -258,7 +258,7 @@ void takeorder()
        printf("\n\n\n Program is closing ....");
        fclose(fptr1);
        getch();
-       exit();
+       exit(0);
     }
     Bill.totalcost=0;
     fprintf(fptr1,"\n---------------------------------------------------------\n");
@@ -321,7 +321,7 @@ void takeorder()
     if(found==0)
     {
         printf("\n\t Sorry!! There is some issue\n");
-        exit();
+        exit(0);
     }
     fprintf(fptr1,"---------------------------------------------------------\n");
     fprintf(fptr1,"\tTotal Cost : \t %.2f\n",Bill.totalcost);
@@ -372,7 +372,7 @@ void salesrecord()
        printf("\n\n\n Program is closing ....");
        fclose(fptr);
        getch();
-       exit();
+       exit(0);
     }
     printf("\n================================================\n");
     printf(" ID\tName\tQuantity\tSold(for each)\n");
@@ -424,7 +424,7 @@ void Spreadsheet()
     if(fptr==NULL||fptr1==NULL||fptr2==NULL)
     {
         printf("\nFie cannot be opened\n");
-        exit();
+        exit(0);
     }
     fprintf(fptr,"ID,NAME,LEFT,PRICE,SOLD,CASH\n");
     while (fread(&Products,sizeof(Products),1,fptr1))
