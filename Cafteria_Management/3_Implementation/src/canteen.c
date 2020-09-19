@@ -56,7 +56,7 @@ int loginpage()
     scanf("%s",username);
     printf("\n\tENTER THE PASSWORD:\t");
 while (i<=9){
-    password[i]=getch();
+    password[i]=//getch();
     c=password[i];
     if(c==13) break;
     else printf("*");
@@ -120,7 +120,7 @@ void editprice()
         printf("\n\tOOPS!! THE FILE CANNOT BE OPENED\n");
         printf("\n\n\n Program is closing ....");
         fclose(fptr);
-        getch();
+        //getch();
         exit(0);
     }
     while(fread(&Products,sizeof(Products),1,fptr)>0)
@@ -140,7 +140,7 @@ void editprice()
     fclose(fptr);
     if(found==0)
         printf("Product not found\n");
-        getch();
+        //getch();
 }
 
 void addquantity()
@@ -156,7 +156,7 @@ void addquantity()
         printf("\n\tOOPS!! THE FILE CANNOT BE OPENED\n");
         printf("\n\n\n Program is closing ....");
         fclose(fptr);
-        getch();
+        //getch();
         exit(0);
     }
     while(fread(&Products,sizeof(Products),1,fptr)>0)
@@ -177,7 +177,7 @@ void addquantity()
     fclose(fptr);
     if(found==0)
         printf("Product not found\n");
-        getch();
+        //getch();
 }
 
 //Add product function
@@ -192,7 +192,7 @@ void addproduct()
         printf("\n\n\n Program is closing ....");
         fclose(fptr);
         fclose(fptr1);
-        getch();
+        //getch();
         exit(0);
     }
     printf("\n\t You are in ADD NEW PRODUCT PAGE\n");
@@ -225,7 +225,7 @@ void viewinventory()
        printf("ERROR!!! FILE COULD NOT BE OPEN\n\n\n Go add Products in ADD PRODUCTS SECTION\n");
        printf("\n\n\n Program is closing ....");
        fclose(fptr);
-       getch();
+       //getch();
        exit(0);
     }
     printf("\n================================================\n");
@@ -239,7 +239,7 @@ void viewinventory()
         printf("%.2f\n\n",Products.product_price);
     }
     fclose(fptr);
-    getch();
+    //getch();
 }
 
 //Take order function
@@ -257,7 +257,7 @@ void takeorder()
        printf("ERROR!!! FILE COULD NOT BE OPEN\n\n\n");
        printf("\n\n\n Program is closing ....");
        fclose(fptr1);
-       getch();
+       //getch();
        exit(0);
     }
     Bill.totalcost=0;
@@ -333,7 +333,7 @@ void takeorder()
     fprintf(fptr1,"\tCUSTOMER NAME: %s\n",Bill.customer_name);
     fprintf(fptr1,"\tBILL NUMBER: %d\n",Bill.bill_number);
     fclose(fptr1);
-    getch();
+    //getch();
 }
 
 //Records Page
@@ -371,7 +371,7 @@ void salesrecord()
        printf("ERROR!!! FILE COULD NOT BE OPEN\n\n\n Go add Products in ADD PRODUCTS SECTION\n");
        printf("\n\n\n Program is closing ....");
        fclose(fptr);
-       getch();
+       //getch();
        exit(0);
     }
     printf("\n================================================\n");
@@ -385,7 +385,7 @@ void salesrecord()
         printf("%.2f\n\n",Sale.soldcost);
     }
     fclose(fptr);
-    getch();
+    //getch();
 }
 //Clear sales record
 void Clearsalesrecord()
@@ -411,7 +411,7 @@ void Clearsalesrecord()
     } 
     fclose(fptr);
     fclose(fptr1);
-    getch();
+    //getch();
 }
 
 void Spreadsheet()
@@ -446,7 +446,7 @@ void Spreadsheet()
     fptr1=NULL;
     fptr2=NULL;
     printf("\n\tSuccessfully Done\n");
-    getch();
+    //getch();
 }
 void aboutltts()
 {
@@ -458,5 +458,5 @@ void aboutltts()
     printf("\t\tWe provide you with easy and delicious recipes\n");
     printf("\t\twith simple, step-by-step instructions for a hassle-free cooking experience\n");
     printf("\t\t\t\tWe serve both Veg and Non-Veg food\n");
-    getch();
+    //getch();
 }
