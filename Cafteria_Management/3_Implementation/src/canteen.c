@@ -12,7 +12,7 @@ int start(int check)
     if(!loginpage())
     {
         printf("\nAccess denied\n\nProgram ending.....\n\n");
-        exit(0);
+        exit();
     }
     //system("cls");
     printf("\n\nHiii! WELCOME TO LTTS CAFTERIA\n");
@@ -258,7 +258,7 @@ void takeorder()
        printf("\n\n\n Program is closing ....");
        fclose(fptr1);
        getch();
-       exit(0);
+       exit();
     }
     Bill.totalcost=0;
     fprintf(fptr1,"\n---------------------------------------------------------\n");
@@ -372,7 +372,7 @@ void salesrecord()
        printf("\n\n\n Program is closing ....");
        fclose(fptr);
        getch();
-       exit(0);
+       exit();
     }
     printf("\n================================================\n");
     printf(" ID\tName\tQuantity\tSold(for each)\n");
