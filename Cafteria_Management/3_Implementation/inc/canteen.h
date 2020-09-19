@@ -20,7 +20,6 @@ struct
     float product_price;
     int product_quantity;
 }Products;
-
 /**
  * @note Structure Bill is for storing the customer information.This includes name,bill number,total cost
  * @note The customer details are stored in Customer file.This file acts as receipt to the Customer
