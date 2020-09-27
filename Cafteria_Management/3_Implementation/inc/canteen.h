@@ -85,17 +85,17 @@ void manageinventory();
  * @note editprice function used to change the price for a particular product
  * @note This requires product id for which you want change the price
 */
-void editprice();
+int editprice();
 
 /**
  * @note View the products which are in inventory file
 */
-void viewinventory();
+int viewinventory();
 
 /**
  * @note To add products to the inventory
 */
-void addproduct();
+int addproduct();
 /**
  * @note addquantity function used to add quantity for a particular product
  * @note This requires product id for which you want add the quantity
