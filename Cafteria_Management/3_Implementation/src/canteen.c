@@ -9,7 +9,7 @@ int start(int check)
     if(check)
         return check;
 
-    if(!loginpage())
+    if(!loginpage("LTTS","104694"))
     {
         printf("\nAccess denied\n\nProgram ending.....\n\n");
         exit(0);
@@ -410,7 +410,7 @@ void Clearsalesrecord()
 {
     //fptr = fopen("Salesrecord.dat","w");
     FILE *fptr1 = fopen("Inventory.dat","rb");
-    if(loginpage())
+    if(loginpage("LTTS","104694"))
     {
         fptr = fopen("Salesrecord.dat","w");
         while(fread(&Products,sizeof(Products),1,fptr1)>0)
