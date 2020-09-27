@@ -231,7 +231,7 @@ void addproduct()
 int viewinventory()
 {
     fptr = fopen("Inventory.dat","rb");
-        if(fptr==NULL)
+    if(fptr==NULL)
         return 0;
     else
         return 1;
