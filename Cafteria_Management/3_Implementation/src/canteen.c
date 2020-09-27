@@ -44,7 +44,7 @@ int start(int check)
 }
 
 //Function definitions
-int loginpage()
+int loginpage(char usrname[], char pwsd[])
 {
     int i=0;
     char c = ' ';
@@ -53,7 +53,9 @@ int loginpage()
     //char password[] = "104694";
     char password[15];
     printf("\n\tENTER THE USER NAME:\t");
-    scanf("%s",username);
+    //scanf("%s",username);
+    strcpy(username,usrname);
+    strcpy(password,pwsd);
     printf("\n\tENTER THE PASSWORD:\t");
 while (i<=9){
     password[i]=//getch();
@@ -108,13 +110,18 @@ void manageinventory()
     }while(choice!=5);
 }
 
-void editprice()
+int editprice()
 {
     viewinventory();
     int n,found=0;
     printf("Enter the ID number of the product you want to edit:\t");
     scanf("%d",&n);
     fptr= fopen("Inventory.dat","rb+");
+    //For testing purpose only
+    if(fptr==NULL)
+        return 0;
+    else
+        return 1;
     if(fptr==NULL)
     {
         printf("\n\tOOPS!! THE FILE CANNOT BE OPENED\n");
@@ -148,9 +155,13 @@ void addquantity()
     viewinventory();
     int n,found=0;
     int tempquantity=0;
+    fptr= fopen("Inventory.dat","rb+");
+    if(fptr==NULL)
+        return 0;
+    else
+        return 1;
     printf("Enter the ID number of the product you want to edit:\t");
     scanf("%d",&n);
-    fptr= fopen("Inventory.dat","rb+");
     if(fptr==NULL)
     {
         printf("\n\tOOPS!! THE FILE CANNOT BE OPENED\n");
@@ -220,6 +231,10 @@ void addproduct()
 void viewinventory()
 {
     fptr = fopen("Inventory.dat","rb");
+        if(fptr==NULL)
+        return 0;
+    else
+        return 1;
     if(fptr==NULL)
     {
        printf("ERROR!!! FILE COULD NOT BE OPEN\n\n\n Go add Products in ADD PRODUCTS SECTION\n");
