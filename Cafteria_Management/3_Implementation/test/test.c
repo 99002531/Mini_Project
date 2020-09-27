@@ -39,7 +39,7 @@ int main(void)
     RUN_TEST(testing_canteen);
     RUN_TEST(testing_loginpage);
     RUN_TEST(testing_editprice);
-    RUN_TEST(testing_addproduct);
+    RUN_TEST(testing_addquantity);
     RUN_TEST(testing_viewinventory);
     return UNITY_END();
 }
