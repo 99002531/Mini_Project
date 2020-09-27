@@ -150,7 +150,7 @@ int editprice()
         //getch();
 }
 
-void addquantity()
+int addquantity()
 {
     viewinventory();
     int n,found=0;
@@ -228,7 +228,7 @@ void addproduct()
     viewinventory();
 }
 //View inventory function
-void viewinventory()
+int viewinventory()
 {
     fptr = fopen("Inventory.dat","rb");
         if(fptr==NULL)
