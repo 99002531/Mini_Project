@@ -148,6 +148,7 @@ int editprice()
     if(found==0)
         printf("Product not found\n");
         //getch();
+    return 0;
 }
 
 int addquantity()
@@ -189,6 +190,7 @@ int addquantity()
     if(found==0)
         printf("Product not found\n");
         //getch();
+    return 0;
 }
 
 //Add product function
@@ -255,6 +257,7 @@ int viewinventory()
     }
     fclose(fptr);
     //getch();
+    return 0;
 }
 
 //Take order function
