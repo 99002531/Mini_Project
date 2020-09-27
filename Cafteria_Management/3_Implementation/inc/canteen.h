@@ -95,12 +95,12 @@ int viewinventory();
 /**
  * @note To add products to the inventory
 */
-int addproduct();
+void addproduct();
 /**
  * @note addquantity function used to add quantity for a particular product
  * @note This requires product id for which you want add the quantity
 */
-void addquantity();
+int addquantity();
 
 //Records function
 /**
